@@ -3,6 +3,7 @@ import {
   BrowserModule,
   provideClientHydration,
 } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,7 @@ import { HeaderComponent } from './header/header.component';
     AboutComponent,
     HeaderComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })

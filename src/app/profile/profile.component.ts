@@ -4,6 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
-  animations: []
 })
 export class ProfileComponent {}
