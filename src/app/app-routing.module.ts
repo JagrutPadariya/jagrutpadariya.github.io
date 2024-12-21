@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ProfileComponent } from './profile/profile.component';
 import { animation } from '@angular/animations';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,11 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent,
     data: { title: 'About', titleI18n: 'About', animation: 'About' },
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    data: { title: 'Contact', titleI18n: 'Contact', animation: 'Contact' },
   },
 ];
 
