@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import {
   trigger,
   transition,
@@ -48,8 +48,18 @@ import {
     ]),
   ],
 })
-export class AppComponent {
-  title = 'personal-profile';
+export class AppComponent implements OnInit {
+  title: string = 'personal-profile';
+  loaded: boolean = false;
+
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.loaded = true;
+      this.cdr.detectChanges(); // Manually trigger change detection
+    }, 2000);
+  }
 
   prepareRoute(outlet: any) {
     return (

@@ -1,5 +1,12 @@
-<app-header></app-header>
+<div *ngIf="!loaded" id="preloader" class="preloader">
+    <h1 class="welcome-message">Welcome to my website</h1>
+</div>
 
-<div [@routeAnimations]="prepareRoute(outlet)">
-    <router-outlet #outlet="outlet" />
+<div *ngIf="loaded" class="loaded">
+    <div class=" main-content">
+        <app-header></app-header>
+        <div [@routeAnimations]="prepareRoute(outlet)">
+            <router-outlet #outlet="outlet"></router-outlet>
+        </div>
+    </div>
 </div>
