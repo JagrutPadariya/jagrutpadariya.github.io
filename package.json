@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:personal-profile": "node dist/personal-profile/server/server.mjs"
+    "serve:ssr:personal-profile": "node dist/personal-profile/server/server.mjs",
+    "deploy": "ng build --configuration production --output-path docs --base-href /personal-portfolio/ && npx angular-cli-ghpages --dir=docs"
   },
   "private": true,
   "dependencies": {
