@@ -4,7 +4,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  isMobileNavVisible: boolean = false;
+
+  toggleMobileNav() {
+    this.isMobileNavVisible = !this.isMobileNavVisible;
+  }
 }

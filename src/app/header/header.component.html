@@ -24,12 +24,13 @@
     <!-- Mobile Menu Starts -->
     <nav class="d-block d-lg-none">
         <div class="inputmobile" id="inputmobile">
-            <div id="trigger-mobile" class="trigger-mobile">
+            <div id="trigger-mobile" class="trigger-mobile" (click)="toggleMobileNav()"
+                [class.show-menu]="isMobileNavVisible">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul class="list-unstyled" id="mobile-nav">
+            <ul class="list-unstyled" id="mobile-nav" [class.hide-list]="isMobileNavVisible">
                 <li class="mobile-nav-element home-link" routerLink="/home" routerLinkActive="active">
                     <div>
                         <i class="fa fa-home"></i>

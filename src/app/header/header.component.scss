@@ -11,22 +11,16 @@
     opacity: 1;
     transition: opacity 0.3s;
   }
-}
-@media (min-width: 992px) {
+
   .header ul.icon-menu {
     margin: 0;
     padding: 0;
   }
-}
-@media (min-width: 992px) {
+
   .header ul.icon-menu li.icon-box.active {
     color: #fff;
   }
-}
-.header ul.icon-menu li.icon-box.active {
-  background-color: #4169e1;
-}
-@media (min-width: 992px) {
+
   .header ul.icon-menu li.icon-box {
     width: 50px;
     height: 50px;
@@ -40,26 +34,18 @@
     background: #2b2a2a;
     cursor: pointer;
   }
-}
-@media (min-width: 992px) {
-  .header ul.icon-menu li.icon-box.active i {
-    color: #fff;
-  }
-}
-@media (min-width: 992px) {
+
   .header ul.icon-menu li.icon-box i {
     color: #ddd;
     font-size: 19px;
     transition: 0.3s;
   }
-}
-@media (min-width: 992px) {
+
   .header .icon-box i.fa {
     position: absolute;
     pointer-events: none;
   }
-}
-@media (min-width: 992px) {
+
   .header .icon-menu i {
     left: 0;
     right: 0;
@@ -69,16 +55,14 @@
     font-size: 35px;
     top: 15px;
   }
-}
-@media (min-width: 992px) {
+
   .header .icon-box div {
     display: block;
     padding: 0;
     width: 50px;
     height: 50px;
   }
-}
-@media (min-width: 992px) {
+
   .header .icon-box h2 {
     z-index: -1;
     position: absolute;
@@ -93,33 +77,143 @@
     text-transform: uppercase;
     padding: 0 25px 0 30px;
     height: 50px;
-  }
-}
-@media (min-width: 992px) {
-  .header .icon-box h2 {
     font-size: 15px;
-    font-weight: 500;
   }
-}
-.header ul.icon-menu li.icon-box.active,
-.header ul.icon-menu li.icon-box:hover {
-  background-color: #4169e1;
-}
-@media (min-width: 992px) {
-  .header ul.icon-menu li.icon-box.active,
-  .header ul.icon-menu li.icon-box:hover {
-    color: #fff;
-  }
-}
-.header .icon-box h2 {
-  background-color: #4169e1;
-}
-@media (min-width: 992px) {
+
   .header .icon-box div:hover h2 {
     opacity: 1;
     right: 27px;
     margin: 0;
     text-align: center;
     border-radius: 30px 0 0 30px;
+  }
+}
+
+.header ul.icon-menu li.icon-box.active {
+  background-color: #4169e1;
+}
+
+.header ul.icon-menu li.icon-box.active,
+.header ul.icon-menu li.icon-box:hover {
+  color: #fff;
+  background-color: #4169e1;
+}
+
+.header .icon-box h2 {
+  background-color: #4169e1;
+}
+
+@media (max-width: 991px) {
+  #inputmobile .trigger-mobile {
+    display: inline-block;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 11;
+    user-select: none;
+    padding: 19px 0 0 16px;
+    width: 54px;
+    height: 54px;
+    border-radius: 5px;
+    background: #252525;
+  }
+
+  #inputmobile .trigger-mobile span:first-child {
+    transform-origin: 0 0;
+  }
+
+  #inputmobile .trigger-mobile span {
+    display: flex;
+    width: 23px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 5px 0;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #inputmobile .trigger-mobile span:nth-last-child(2) {
+    transform-origin: 0 100%;
+  }
+
+  #inputmobile ul.hide-list {
+    transform: none;
+  }
+
+  #mobile-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 1;
+    padding-top: 60px;
+    background-color: #252525;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0 0;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #mobile-nav.show-menu {
+    transform: translate(0, 0);
+  }
+
+  #mobile-nav li {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .mobile-nav-element.active {
+    color: #4169e1;
+  }
+
+  .mobile-nav-element {
+    font-size: 26px;
+    text-transform: uppercase;
+  }
+
+  #inputmobile .trigger-mobile.show-menu span {
+    opacity: 1;
+    transform: rotate(45deg) translate(2px, -2px);
+    background: #fff;
+  }
+
+  #inputmobile .trigger-mobile.show-menu span:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #inputmobile .trigger-mobile.show-menu span:nth-last-child(1) {
+    transform: rotate(-45deg) translate(1px, -1px);
+  }
+
+  .mobile-nav-element > div {
+    padding: 14px 0;
+    position: relative;
+  }
+
+  #mobile-nav li:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: calc(100% - 60px);
+    background: #333;
+    left: 30px;
+  }
+
+  .mobile-nav-element.active > div span {
+    font-weight: 500;
+  }
+
+  .mobile-nav-element > div span {
+    position: absolute;
+    left: 50px;
+    font-weight: 400;
   }
 }
