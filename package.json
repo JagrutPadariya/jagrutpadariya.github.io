@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration production --output-path docs --base-href /jagrutpadariya.github.io/personal-portfolio/ && npx angular-cli-ghpages --dir=docs"
+    "deploy": "ng build --configuration production --output-path docs --base-href /jagrutpadariya.github.io/ && npx angular-cli-ghpages --dir=docs"
   },
   "private": true,
   "dependencies": {
