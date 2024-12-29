@@ -109,7 +109,7 @@
     position: fixed;
     top: 30px;
     right: 30px;
-    z-index: 11;
+    z-index: 13;
     user-select: none;
     padding: 19px 0 0 16px;
     width: 54px;
@@ -151,7 +151,7 @@
     width: 100%;
     height: 100%;
     margin: 0;
-    z-index: 1;
+    z-index: 12;
     padding-top: 60px;
     background-color: #252525;
     -webkit-font-smoothing: antialiased;
@@ -215,5 +215,21 @@
     position: absolute;
     left: 50px;
     font-weight: 400;
+  }
+}
+@media (max-width: 576px) {
+  .home-page #inputmobile .trigger-mobile {
+    right: 25px;
+    top: 25px;
+    padding: 17px 0 0 13px;
+  }
+}
+@media (max-width: 576px) {
+  #inputmobile .trigger-mobile {
+    width: 49px;
+    height: 49px;
+    right: 10px;
+    top: 4px;
+    padding: 19px 0 0 13px;
   }
 }
